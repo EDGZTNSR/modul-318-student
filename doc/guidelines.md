@@ -122,6 +122,7 @@ Folgenden Controls starten mit folgenden Prefix und danach mit einem Grossbuchst
 |CheckBox|chk...|
 |GroupBox|grp...|
 |Panel|pnl...|
+|DataGridView|dgv...|
 
 GUI-Events: Standard.
 

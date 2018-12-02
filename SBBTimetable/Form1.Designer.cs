@@ -47,6 +47,8 @@
             this.btndepartureBoard = new System.Windows.Forms.Button();
             this.btnMap = new System.Windows.Forms.Button();
             this.lblConnections = new System.Windows.Forms.Label();
+            this.txtStation = new System.Windows.Forms.TextBox();
+            this.txtToStation = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnSearchForConnections
@@ -58,7 +60,7 @@
             this.btnSearchForConnections.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearchForConnections.Name = "btnSearchForConnections";
             this.btnSearchForConnections.Size = new System.Drawing.Size(160, 38);
-            this.btnSearchForConnections.TabIndex = 27;
+            this.btnSearchForConnections.TabIndex = 2;
             this.btnSearchForConnections.Text = "Verbindung Suchen";
             this.btnSearchForConnections.UseVisualStyleBackColor = false;
             this.btnSearchForConnections.Click += new System.EventHandler(this.btnSearchForConnections_Click);
@@ -68,11 +70,11 @@
             this.btnChangePosition.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnChangePosition.BackgroundImage")));
             this.btnChangePosition.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnChangePosition.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChangePosition.Location = new System.Drawing.Point(417, 72);
+            this.btnChangePosition.Location = new System.Drawing.Point(399, 49);
             this.btnChangePosition.Margin = new System.Windows.Forms.Padding(2);
             this.btnChangePosition.Name = "btnChangePosition";
             this.btnChangePosition.Size = new System.Drawing.Size(56, 35);
-            this.btnChangePosition.TabIndex = 24;
+            this.btnChangePosition.TabIndex = 5;
             this.btnChangePosition.UseVisualStyleBackColor = true;
             this.btnChangePosition.Click += new System.EventHandler(this.btnChangePosition_Click);
             // 
@@ -85,7 +87,6 @@
             this.cmbToStation.Name = "cmbToStation";
             this.cmbToStation.Size = new System.Drawing.Size(320, 25);
             this.cmbToStation.TabIndex = 23;
-            this.cmbToStation.Click += new System.EventHandler(this.cmbToStation_Click);
             // 
             // cmbFromStation
             // 
@@ -97,13 +98,12 @@
             this.cmbFromStation.Name = "cmbFromStation";
             this.cmbFromStation.Size = new System.Drawing.Size(320, 25);
             this.cmbFromStation.TabIndex = 22;
-            this.cmbFromStation.Click += new System.EventHandler(this.cmbFromStation_Click);
             // 
             // lblToPosition
             // 
             this.lblToPosition.AutoSize = true;
             this.lblToPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblToPosition.Location = new System.Drawing.Point(18, 148);
+            this.lblToPosition.Location = new System.Drawing.Point(20, 116);
             this.lblToPosition.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblToPosition.Name = "lblToPosition";
             this.lblToPosition.Size = new System.Drawing.Size(49, 17);
@@ -114,7 +114,7 @@
             // 
             this.lblFromPosition.AutoSize = true;
             this.lblFromPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFromPosition.Location = new System.Drawing.Point(18, 77);
+            this.lblFromPosition.Location = new System.Drawing.Point(20, 52);
             this.lblFromPosition.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFromPosition.Name = "lblFromPosition";
             this.lblFromPosition.Size = new System.Drawing.Size(37, 17);
@@ -126,11 +126,11 @@
             this.btnDeleteStation.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDeleteStation.BackgroundImage")));
             this.btnDeleteStation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDeleteStation.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeleteStation.Location = new System.Drawing.Point(417, 134);
+            this.btnDeleteStation.Location = new System.Drawing.Point(398, 113);
             this.btnDeleteStation.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteStation.Name = "btnDeleteStation";
             this.btnDeleteStation.Size = new System.Drawing.Size(56, 38);
-            this.btnDeleteStation.TabIndex = 29;
+            this.btnDeleteStation.TabIndex = 6;
             this.btnDeleteStation.UseVisualStyleBackColor = true;
             this.btnDeleteStation.Click += new System.EventHandler(this.btnDeleteStation_Click);
             // 
@@ -138,7 +138,7 @@
             // 
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.Location = new System.Drawing.Point(19, 192);
+            this.lblTime.Location = new System.Drawing.Point(21, 184);
             this.lblTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(36, 17);
@@ -150,10 +150,10 @@
             this.TimePicker.Checked = false;
             this.TimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.TimePicker.Location = new System.Drawing.Point(74, 187);
+            this.TimePicker.Location = new System.Drawing.Point(74, 179);
             this.TimePicker.Margin = new System.Windows.Forms.Padding(2);
             this.TimePicker.Name = "TimePicker";
-            this.TimePicker.Size = new System.Drawing.Size(102, 23);
+            this.TimePicker.Size = new System.Drawing.Size(160, 23);
             this.TimePicker.TabIndex = 30;
             // 
             // lvConnections
@@ -204,7 +204,7 @@
             this.btndepartureBoard.Location = new System.Drawing.Point(234, 240);
             this.btndepartureBoard.Name = "btndepartureBoard";
             this.btndepartureBoard.Size = new System.Drawing.Size(160, 38);
-            this.btndepartureBoard.TabIndex = 33;
+            this.btndepartureBoard.TabIndex = 3;
             this.btndepartureBoard.Text = "Abfahrtstafel";
             this.btndepartureBoard.UseVisualStyleBackColor = true;
             this.btndepartureBoard.Click += new System.EventHandler(this.btndepartureBoard_Click);
@@ -215,11 +215,11 @@
             this.btnMap.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMap.BackgroundImage")));
             this.btnMap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMap.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMap.Location = new System.Drawing.Point(417, 240);
+            this.btnMap.Location = new System.Drawing.Point(399, 240);
             this.btnMap.Margin = new System.Windows.Forms.Padding(2);
             this.btnMap.Name = "btnMap";
             this.btnMap.Size = new System.Drawing.Size(56, 38);
-            this.btnMap.TabIndex = 34;
+            this.btnMap.TabIndex = 4;
             this.btnMap.UseVisualStyleBackColor = false;
             this.btnMap.Click += new System.EventHandler(this.btnMap_Click);
             // 
@@ -234,12 +234,32 @@
             this.lblConnections.Text = "Verbindungen:";
             this.lblConnections.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // txtStation
+            // 
+            this.txtStation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtStation.Location = new System.Drawing.Point(74, 49);
+            this.txtStation.Name = "txtStation";
+            this.txtStation.Size = new System.Drawing.Size(320, 23);
+            this.txtStation.TabIndex = 0;
+            this.txtStation.TextChanged += new System.EventHandler(this.txtStation_TextChanged);
+            // 
+            // txtToStation
+            // 
+            this.txtToStation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.txtToStation.Location = new System.Drawing.Point(74, 113);
+            this.txtToStation.Name = "txtToStation";
+            this.txtToStation.Size = new System.Drawing.Size(320, 23);
+            this.txtToStation.TabIndex = 1;
+            this.txtToStation.TextChanged += new System.EventHandler(this.txtToStation_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(599, 672);
+            this.Controls.Add(this.txtToStation);
+            this.Controls.Add(this.txtStation);
             this.Controls.Add(this.lblConnections);
             this.Controls.Add(this.btnMap);
             this.Controls.Add(this.btndepartureBoard);
@@ -283,6 +303,8 @@
         private System.Windows.Forms.Label lblConnections;
         private System.Windows.Forms.TextBox txtFromStation;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtToStation;
+        private System.Windows.Forms.TextBox txtStation;
     }
 }
 

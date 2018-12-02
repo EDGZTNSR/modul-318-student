@@ -67,10 +67,15 @@ namespace SBBTimetable
             Map gMap = new Map();
             gMap.getLocation(stationList, transport, cmbToStation.SelectedItem.ToString());
         }
-        private void cmbFromStation_TextUpdate(object sender, EventArgs e)
+        private void txtStation_TextChanged(object sender, EventArgs e)
         {
             cmbFromStation.Items.Clear();
-            GetStation(cmbFromStation.Text, true);
+            GetStation(txtStation.Text, true);
+        }
+        private void txtToStation_TextChanged(object sender, EventArgs e)
+        {
+            cmbToStation.Items.Clear();
+            GetStation(cmbToStation.Text, false);
         }
         //Funktionen
 
@@ -94,6 +99,10 @@ namespace SBBTimetable
                 {
                     cmbFromStation.Items.Add(item);
                 }
+                if (cmbFromStation.Items.Count > 0)
+                {
+                    cmbFromStation.SelectedIndex = 0;
+                }
             }
             else
             {
@@ -110,7 +119,10 @@ namespace SBBTimetable
                 {
                     cmbToStation.Items.Add(item);
                 }
-                
+                if (cmbToStation.Items.Count > 0)
+                {
+                    cmbToStation.SelectedIndex = 0;
+                }
             }
         }
         //private bool HasValue(int? value)

@@ -43,7 +43,8 @@
             this.GMap_GMapControl.GrayScaleMode = false;
             this.GMap_GMapControl.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.GMap_GMapControl.LevelsKeepInMemmory = 5;
-            this.GMap_GMapControl.Location = new System.Drawing.Point(12, 12);
+            this.GMap_GMapControl.Location = new System.Drawing.Point(16, 15);
+            this.GMap_GMapControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.GMap_GMapControl.MarkersEnabled = true;
             this.GMap_GMapControl.MaxZoom = 2;
             this.GMap_GMapControl.MinZoom = 2;
@@ -57,15 +58,16 @@
             this.GMap_GMapControl.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.GMap_GMapControl.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.GMap_GMapControl.ShowTileGridLines = false;
-            this.GMap_GMapControl.Size = new System.Drawing.Size(812, 474);
+            this.GMap_GMapControl.Size = new System.Drawing.Size(1083, 583);
             this.GMap_GMapControl.TabIndex = 2;
             this.GMap_GMapControl.Zoom = 0D;
             // 
             // btnCloseMap
             // 
-            this.btnCloseMap.Location = new System.Drawing.Point(732, 503);
+            this.btnCloseMap.Location = new System.Drawing.Point(976, 619);
+            this.btnCloseMap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCloseMap.Name = "btnCloseMap";
-            this.btnCloseMap.Size = new System.Drawing.Size(92, 28);
+            this.btnCloseMap.Size = new System.Drawing.Size(123, 34);
             this.btnCloseMap.TabIndex = 3;
             this.btnCloseMap.Text = "Schliessen";
             this.btnCloseMap.UseVisualStyleBackColor = true;
@@ -73,13 +75,14 @@
             // 
             // Map
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 543);
+            this.ClientSize = new System.Drawing.Size(1115, 668);
             this.Controls.Add(this.btnCloseMap);
             this.Controls.Add(this.GMap_GMapControl);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Map";
-            this.Text = "Map";
+            this.Text = "Karte";
             this.ResumeLayout(false);
 
         }

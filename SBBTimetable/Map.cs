@@ -17,20 +17,17 @@ namespace SBBTimetable
 {
     public partial class Map : Form
     {
-        GMapMarker marker;
-        GMapOverlay overlay;
-
         public Map()
         {
             InitializeComponent();
         }
-
-        //Events
+        //Events / Ereignisse
         private void btnCloseMap_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        private void setToLocation(double x,double y, string stationName)
+        //Funktionen
+        private void SetToLocation(double x,double y, string stationName)
         {
             GMap_GMapControl.Position = new PointLatLng(x, y);
             GMap_GMapControl.MapProvider = GMapProviders.GoogleMap;
@@ -47,18 +44,17 @@ namespace SBBTimetable
         /// <param name="stations"></param>
         /// <param name="transport"></param>
         /// <param name="locationName"></param>
-        public void getLocation(List<Station> stations, Transport transport, string locationName)
+        public void GetLocation(List<Station> stations, Transport transport, string locationName)
         {
             stations = transport.GetStations(locationName).StationList;
             foreach (Station station in stations)
             {
                 if (station.Name == locationName)
                 {
-                    this.setToLocation(station.Coordinate.XCoordinate, station.Coordinate.YCoordinate, station.Name.ToString());
+                    this.SetToLocation(station.Coordinate.XCoordinate, station.Coordinate.YCoordinate, station.Name.ToString());
                     this.Show();
                 }
             }
         }
-        //Funktionen
     }
 }

@@ -1,6 +1,22 @@
-# modul-318-Student
+Modul-318 Dokumentation
+============
+## Einleitung
+Diese Dokumentation dient zur Übersicht über die Projektarbeit die wir für das Modul 318 hatten. In dem Projekt mussten wir einen SBB Fahrplan erstellen.
+Die Daten werden über eine API von "http://transport.opendata.ch/" geholt.
+Das Programm zeigt 4 ÖV-Verbindungen zwischen einer Startstation und einer Endstation an.
 
-Students!
-Fork this repository to your own Github account. Work there with this repository. The intructor will clone your repo for inspection and evaluation.
+---
+## Zweck des Dokumentes
 
-Have Fun!
+Das Dokument dient zur Übersicht über das Projekt.
+Alle Phasen der Projektarbeit werden detailliert beschrieben und folgen einem sinnvollen Ablauf.
+
+---
+
+## Inhaltsverzeichnis
+1. [Funktionsumfang](Link einfügen)
+2. [Bugs / nicht vollstänfige FUnktionen](Link einfügen)
+3. [Diagramme für umgesetzte Anforderungen](Link einfügen)
+4. [Tests](Link einfügen)
+5. [Installationsanleitung](Link einfügen)
+6. [Sonstige Informationen](Link einfügen)

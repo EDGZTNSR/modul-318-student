@@ -16,13 +16,14 @@ namespace SBBTimetable
         {
             InitializeComponent();
         }
-
+        //Events / Ereignisse
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        //Funktionen
         /// <summary>
-        /// Sets the Station in the Station label
+        /// Set stationname from "From Station" into Label Text
         /// </summary>
         /// <param name="station"></param>
         public void setcmbFromStation(string station)
@@ -30,12 +31,12 @@ namespace SBBTimetable
             lblFromStation.Text = station;
         }
         /// <summary>
-        /// Set Items for Stationboard List
+        /// Set Items for Stationboard ListView
         /// </summary>
         public void setListItemView()
         {
             livStationboard.Items.Clear();
-            Form1 mainForm = new Form1();
+            MainForm mainForm = new MainForm();
             livStationboard.Items.AddRange(mainForm.GetStationBoard(lblFromStation.Text));
         }
 

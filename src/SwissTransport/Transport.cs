@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Net;
 using Newtonsoft.Json;
 
@@ -39,21 +40,25 @@ namespace SwissTransport
 
             return null;
         }
-
-        public Connections GetConnections(string fromStation, string toStation)
+        public Connections GetConnections(string fromStation, string toStation, string departureDate, string departureTime, int isArrivalTime)
         {
-            var request = CreateWebRequest("http://transport.opendata.ch/v1/connections?from=" + fromStation + "&to=" + toStation);
-            var response = request.GetResponse();
-            var responseStream = response.GetResponseStream();
-
-            if (responseStream != null)
+            try
             {
-                var readToEnd = new StreamReader(responseStream).ReadToEnd();
-                var connections =
-                    JsonConvert.DeserializeObject<Connections>(readToEnd);
-                return connections;
+                var request = CreateWebRequest("http://transport.opendata.ch/v1/connections?from=" + fromStation + "&to=" + toStation + "&time" + departureTime + "&date" + departureDate + "&isArrivalTime=" + isArrivalTime);
+                var response = request.GetResponse();
+                var responseStream = response.GetResponseStream();
+                if (responseStream != null)
+                {
+                    var readToEnd = new StreamReader(responseStream).ReadToEnd();
+                    var connections =
+                        JsonConvert.DeserializeObject<Connections>(readToEnd);
+                    return connections;
+                }
             }
-
+            catch(TimeoutException)
+            {
+                
+            }
             return null;
         }
 

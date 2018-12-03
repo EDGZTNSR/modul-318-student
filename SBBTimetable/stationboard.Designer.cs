@@ -33,15 +33,16 @@
             this.colLine = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colDeparture = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colTo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lblStation = new System.Windows.Forms.Label();
             this.lblFromStation = new System.Windows.Forms.Label();
+            this.lblStation = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(439, 237);
+            this.btnClose.Location = new System.Drawing.Point(585, 292);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 32);
+            this.btnClose.Size = new System.Drawing.Size(100, 39);
             this.btnClose.TabIndex = 26;
             this.btnClose.Text = "Schliessen";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -54,9 +55,10 @@
             this.colLine,
             this.colDeparture,
             this.colTo});
-            this.livStationboard.Location = new System.Drawing.Point(12, 53);
+            this.livStationboard.Location = new System.Drawing.Point(16, 65);
+            this.livStationboard.Margin = new System.Windows.Forms.Padding(4);
             this.livStationboard.Name = "livStationboard";
-            this.livStationboard.Size = new System.Drawing.Size(501, 178);
+            this.livStationboard.Size = new System.Drawing.Size(667, 218);
             this.livStationboard.TabIndex = 24;
             this.livStationboard.UseCompatibleStateImageBehavior = false;
             this.livStationboard.View = System.Windows.Forms.View.Details;
@@ -76,36 +78,40 @@
             this.colTo.Text = "Bis Station";
             this.colTo.Width = 358;
             // 
-            // lblStation
-            // 
-            this.lblStation.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblStation.Location = new System.Drawing.Point(12, 19);
-            this.lblStation.Name = "lblStation";
-            this.lblStation.Size = new System.Drawing.Size(100, 20);
-            this.lblStation.TabIndex = 23;
-            this.lblStation.Text = "Von Station";
-            this.lblStation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // lblFromStation
             // 
             this.lblFromStation.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblFromStation.Location = new System.Drawing.Point(118, 19);
+            this.lblFromStation.Location = new System.Drawing.Point(157, 23);
+            this.lblFromStation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFromStation.Name = "lblFromStation";
-            this.lblFromStation.Size = new System.Drawing.Size(395, 20);
+            this.lblFromStation.Size = new System.Drawing.Size(527, 25);
             this.lblFromStation.TabIndex = 27;
             this.lblFromStation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // lblStation
+            // 
+            this.lblStation.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lblStation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblStation.Location = new System.Drawing.Point(16, 23);
+            this.lblStation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStation.Name = "lblStation";
+            this.lblStation.Size = new System.Drawing.Size(133, 24);
+            this.lblStation.TabIndex = 36;
+            this.lblStation.Text = "Von Station:";
+            this.lblStation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // stationboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 281);
+            this.ClientSize = new System.Drawing.Size(701, 346);
+            this.Controls.Add(this.lblStation);
             this.Controls.Add(this.lblFromStation);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.livStationboard);
-            this.Controls.Add(this.lblStation);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "stationboard";
-            this.Text = "stationboard";
+            this.Text = "Abfahrtstafel";
             this.ResumeLayout(false);
 
         }
@@ -117,7 +123,7 @@
         private System.Windows.Forms.ColumnHeader colLine;
         private System.Windows.Forms.ColumnHeader colDeparture;
         private System.Windows.Forms.ColumnHeader colTo;
-        private System.Windows.Forms.Label lblStation;
         private System.Windows.Forms.Label lblFromStation;
+        private System.Windows.Forms.Label lblStation;
     }
 }

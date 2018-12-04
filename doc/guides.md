@@ -3,7 +3,7 @@
 
 ### Installationsanleitung
 
-1.  Den [SBBTimetableWizard]() herunterladen und ausführen
+1.  Den [SBBTimetableWizard](https://github.com/EDGZTNSR/modul-318-student/raw/master/doc/SBBTimetableWizard.msi) herunterladen und ausführen
 3.  Weiter bis zum Installationspfad, diesen angeben und danach auf Weiter klicken.
 2.  Den Wizard komplett durchlaufen und danach kann die SBBTimetable.exe geöffnet werden.
 

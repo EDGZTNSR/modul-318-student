@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.btnSearchForConnections = new System.Windows.Forms.Button();
-            this.btnChangePosition = new System.Windows.Forms.Button();
             this.cmbToStation = new System.Windows.Forms.ComboBox();
             this.cmbFromStation = new System.Windows.Forms.ComboBox();
             this.lblToPosition = new System.Windows.Forms.Label();
@@ -42,7 +41,7 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btndepartureBoard = new System.Windows.Forms.Button();
+            this.btnDepartureBoard = new System.Windows.Forms.Button();
             this.btnMap = new System.Windows.Forms.Button();
             this.lblConnections = new System.Windows.Forms.Label();
             this.txtStation = new System.Windows.Forms.TextBox();
@@ -70,19 +69,6 @@
             this.btnSearchForConnections.Text = "Verbindung Suchen";
             this.btnSearchForConnections.UseVisualStyleBackColor = false;
             this.btnSearchForConnections.Click += new System.EventHandler(this.btnSearchForConnections_Click);
-            // 
-            // btnChangePosition
-            // 
-            this.btnChangePosition.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnChangePosition.BackgroundImage")));
-            this.btnChangePosition.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnChangePosition.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChangePosition.Location = new System.Drawing.Point(532, 60);
-            this.btnChangePosition.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnChangePosition.Name = "btnChangePosition";
-            this.btnChangePosition.Size = new System.Drawing.Size(75, 43);
-            this.btnChangePosition.TabIndex = 5;
-            this.btnChangePosition.UseVisualStyleBackColor = true;
-            this.btnChangePosition.Click += new System.EventHandler(this.btnChangePosition_Click);
             // 
             // cmbToStation
             // 
@@ -130,7 +116,7 @@
             this.btnDeleteStation.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDeleteStation.BackgroundImage")));
             this.btnDeleteStation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDeleteStation.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeleteStation.Location = new System.Drawing.Point(531, 139);
+            this.btnDeleteStation.Location = new System.Drawing.Point(532, 105);
             this.btnDeleteStation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeleteStation.Name = "btnDeleteStation";
             this.btnDeleteStation.Size = new System.Drawing.Size(75, 47);
@@ -180,18 +166,18 @@
             this.columnHeader5.Text = "Dauer";
             this.columnHeader5.Width = 55;
             // 
-            // btndepartureBoard
+            // btnDepartureBoard
             // 
-            this.btndepartureBoard.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btndepartureBoard.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btndepartureBoard.Location = new System.Drawing.Point(312, 295);
-            this.btndepartureBoard.Margin = new System.Windows.Forms.Padding(4);
-            this.btndepartureBoard.Name = "btndepartureBoard";
-            this.btndepartureBoard.Size = new System.Drawing.Size(213, 47);
-            this.btndepartureBoard.TabIndex = 3;
-            this.btndepartureBoard.Text = "Abfahrtstafel";
-            this.btndepartureBoard.UseVisualStyleBackColor = true;
-            this.btndepartureBoard.Click += new System.EventHandler(this.btndepartureBoard_Click);
+            this.btnDepartureBoard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDepartureBoard.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnDepartureBoard.Location = new System.Drawing.Point(312, 295);
+            this.btnDepartureBoard.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDepartureBoard.Name = "btnDepartureBoard";
+            this.btnDepartureBoard.Size = new System.Drawing.Size(213, 47);
+            this.btnDepartureBoard.TabIndex = 3;
+            this.btnDepartureBoard.Text = "Abfahrtstafel";
+            this.btnDepartureBoard.UseVisualStyleBackColor = true;
+            this.btnDepartureBoard.Click += new System.EventHandler(this.btnDepartureBoard_Click);
             // 
             // btnMap
             // 
@@ -327,13 +313,12 @@
             this.Controls.Add(this.txtStation);
             this.Controls.Add(this.lblConnections);
             this.Controls.Add(this.btnMap);
-            this.Controls.Add(this.btndepartureBoard);
+            this.Controls.Add(this.btnDepartureBoard);
             this.Controls.Add(this.lvConnections);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.tpFromDate);
             this.Controls.Add(this.btnDeleteStation);
             this.Controls.Add(this.btnSearchForConnections);
-            this.Controls.Add(this.btnChangePosition);
             this.Controls.Add(this.cmbToStation);
             this.Controls.Add(this.cmbFromStation);
             this.Controls.Add(this.lblToPosition);
@@ -351,7 +336,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnSearchForConnections;
-        private System.Windows.Forms.Button btnChangePosition;
         private System.Windows.Forms.ComboBox cmbToStation;
         private System.Windows.Forms.ComboBox cmbFromStation;
         private System.Windows.Forms.Label lblToPosition;
@@ -363,7 +347,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.Button btndepartureBoard;
+        private System.Windows.Forms.Button btnDepartureBoard;
         private System.Windows.Forms.Button btnMap;
         private System.Windows.Forms.Label lblConnections;
         private System.Windows.Forms.TextBox txtToStation;

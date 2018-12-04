@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwissTransportTest", "tests
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBBTimetable", "SBBTimetable\SBBTimetable.csproj", "{A6CB2209-52C4-4B64-A949-257ABD688DA2}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SBBTimetableWizard", "SBBTimetableWizard\SBBTimetableWizard.vdproj", "{08264D53-8F11-4B71-B5D2-AD2B184C8AD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBBTimetableUnitTest", "SBBTimetableUnitTest\SBBTimetableUnitTest.csproj", "{DE5E16C0-86E8-45DF-8EC9-F84DA1AA6FF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,12 @@ Global
 		{A6CB2209-52C4-4B64-A949-257ABD688DA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6CB2209-52C4-4B64-A949-257ABD688DA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6CB2209-52C4-4B64-A949-257ABD688DA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08264D53-8F11-4B71-B5D2-AD2B184C8AD7}.Debug|Any CPU.ActiveCfg = Debug
+		{08264D53-8F11-4B71-B5D2-AD2B184C8AD7}.Release|Any CPU.ActiveCfg = Release
+		{DE5E16C0-86E8-45DF-8EC9-F84DA1AA6FF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE5E16C0-86E8-45DF-8EC9-F84DA1AA6FF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE5E16C0-86E8-45DF-8EC9-F84DA1AA6FF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE5E16C0-86E8-45DF-8EC9-F84DA1AA6FF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

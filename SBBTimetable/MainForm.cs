@@ -26,28 +26,19 @@ namespace SBBTimetable
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.FixedDialog;
         }
-        //Events / Ereignisse
-        private void btnChangePosition_Click(object sender, EventArgs e)
-        {
-            string fromStationText = "";
-            string toStationText = "";
-            string txtStationText = "";
-            fromStationText = cmbFromStation.Text;
-            toStationText = cmbToStation.Text;
-            txtStationText = txtStation.Text;
 
-            cmbToStation.Text = fromStationText;
-            txtStation.Text = txtToStation.Text;
-            cmbFromStation.Text = toStationText;
-            txtToStation.Text = txtStationText;
-        }
+        /*Events / Ereignisse*/
+        //Click Event to Delete Stations
         private void btnDeleteStation_Click(object sender, EventArgs e)
         {
             cmbToStation.Items.Clear();
+            cmbToStation.Text = "";
             txtStation.Clear();
             cmbFromStation.Items.Clear();
+            cmbFromStation.Text = "";
             txtToStation.Clear();
         }
+        //Click Event to Show Connections in ListView
         private void btnSearchForConnections_Click(object sender, EventArgs e)
         {
             SetIsArrivalTime();
@@ -56,29 +47,41 @@ namespace SBBTimetable
             lvConnections.Items.Clear();
             lvConnections.Items.AddRange(GetConnection(cmbFromStation.Text, cmbToStation.Text));
         }
-        private void btndepartureBoard_Click(object sender, EventArgs e)
+        //Click Event to Show the Departure Board from the Current "From" Station
+        private void btnDepartureBoard_Click(object sender, EventArgs e)
         {
-            stationboard stationBoardForm = new stationboard();
-            stationBoardForm.setcmbFromStation(cmbFromStation.Text);
-            stationBoardForm.setListItemView();
-            stationBoardForm.ShowDialog();
+            if (cmbFromStation.SelectedIndex != -1)
+            {
+                stationboard stationBoardForm = new stationboard();
+                stationBoardForm.setcmbFromStation(cmbFromStation.Text);
+                stationBoardForm.setListItemView();
+                stationBoardForm.ShowDialog();
+            }
         }
+        //Click Event to Show the Current "To" Station on the Map Form
         private void btnMap_Click(object sender, EventArgs e)
         {
-            Map gMap = new Map();
-            gMap.GetLocation(stationList, transport, cmbToStation.SelectedItem.ToString());
+            if (cmbToStation.SelectedIndex != -1)
+            {
+                Map gMap = new Map();
+                gMap.GetLocation(stationList, transport, cmbToStation.SelectedItem.ToString());
+            }
         }
+        //Text Change Event to Show Textinput in the "From" Station Combobox below
         private void txtStation_TextChanged(object sender, EventArgs e)
         {
             cmbFromStation.Items.Clear();
             GetFromStation(txtStation.Text, cmbFromStation);
         }
+        //Text Change Event to Show Textinput in the "To" Station Combobox below
         private void txtToStation_TextChanged(object sender, EventArgs e)
         {
             cmbToStation.Items.Clear();
             GetToStation(txtToStation.Text, cmbToStation);
         }
-        //Funktionen
+        
+        /*Funktionen*/
+        //Function to get all stations for the "From" Station Combobox
         private void GetFromStation(string location, ComboBox cmbStation)
         {
             //Lokale Variablen
@@ -100,6 +103,7 @@ namespace SBBTimetable
                 cmbStation.SelectedIndex = 0;
             }
         }
+        //Function to get all stations for the "To" Station Combobox
         private void GetToStation(string location, ComboBox cmbStation)
         {
             //Lokale Variabeln
@@ -121,6 +125,7 @@ namespace SBBTimetable
                 cmbStation.SelectedIndex = 0;
             }
         }
+        //Function to get all connections into the ListView
         private ListViewItem[] GetConnection(string fromStation, string toStation)
         {
             Connections ConnectionListView = transport.GetConnections(fromStation, toStation, departureDate, departureTime, isArrivalTime);
@@ -152,10 +157,10 @@ namespace SBBTimetable
             return listView;
         }   
         /// <summary>
-        /// Function to get Stationboard from current FromStation
+        /// Function to get stationboard from current "From" station
         /// </summary>
         /// <param name="fromStation"></param>
-        /// <returns></returns>
+        /// <returns>ListViewItem for the stationboard</returns>
         public ListViewItem[] GetStationBoard(string fromStation)
         {
             Stations stations = new Stations();
@@ -191,14 +196,17 @@ namespace SBBTimetable
 
             return stationListView;
         }
+        //Function to set the membervariable departureTime
         private void SetDepartureTime()
         {
             departureTime = (tpFromTime.Value.Hour+1) + ":" + tpFromTime.Value.Minute;
         }
+        //Function to set the memvervariable departureDate
         private void SetDepartureDate()
         {
             departureDate = tpFromDate.Value.Year + "-" + tpFromDate.Value.Month + "-" + tpFromDate.Value.Day;
         }
+        //Funtion to set the membervariable IsArrivalTime, 0 = false, 1 = true. 1 is default value
         private void SetIsArrivalTime()
         {
             if(optIsArrival.Checked == true)

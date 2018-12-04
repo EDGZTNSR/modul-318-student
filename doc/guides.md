@@ -14,11 +14,10 @@
 
 ### Bedienungsanleitung
 
-1.  Die SBBTimetable.exe öffnen
-2.  Die "Von" Station im oberen Suchfeld eingeben. In der Box unterhalb werden nun Suchvorschläge angezeigt. Um mehr Suchvorschläge zu sehen auf den Pfeil auf der Box klicken.
-3.  Dasselbe mit der "Nach" Station.
-4.  Nun um die Verbindungen zu sehen auf den Button "Verbindungen Suchen" mit der linken Maustaste klicken.
-5.  Um die Abfahrsstafel zu öffnen auf den Button, "Abfahrtstafel", rechts daneben klicken.
-6.  Um sich die Karte auf Google Maps anzeigen zu lassen auf den Button mit der Karte klicken. Dieser befindet sich rechts neben dem "Abfahrsstafel" Button.
-7.  Um ein anderes Datum oder eine andere Zeit zu haben die entsprechenden beiden Felder ändern. Daneben kann auch die Abfahrts- oder Ankunftszeit gewählt werden.
-8.  Um die Sucheingaben zu löschen den "Mülleimer" anklicken.
+1.  Die SBBTimetable.exe öffnen<br>![](https://github.com/EDGZTNSR/modul-318-student/blob/master/doc/guide/Step0.JPG)
+2.  In den Suchfeldern die Startstation und Endstation angeben<br>![](https://github.com/EDGZTNSR/modul-318-student/blob/master/doc/guide/Step1.JPG)
+4.  Nun um die Verbindungen zu sehen auf den Button "Verbindungen Suchen" anklicken.<br>![](https://github.com/EDGZTNSR/modul-318-student/blob/master/doc/guide/Step2.JPG)
+5.  Um die Abfahrsstafel zu öffnen auf den Button "Abfahrtstafel" anklicken.<br>![](https://github.com/EDGZTNSR/modul-318-student/blob/master/doc/guide/Step3.JPG)
+6.  Um sich die Station auf der Karte anzeigen zu lassen die Karte anklicke<br>![](https://github.com/EDGZTNSR/modul-318-student/blob/master/doc/guide/Step4.JPG)
+7.  Um ein anderes Datum oder eine andere Zeit zu haben die entsprechenden beiden Felder ändern.<br>![](https://github.com/EDGZTNSR/modul-318-student/blob/master/doc/guide/Step5.JPG)
+8.  Um die Sucheingaben zu löschen den "Mülleimer" anklicken.<br>![](https://github.com/EDGZTNSR/modul-318-student/blob/master/doc/guide/Step6.JPG)

@@ -116,7 +116,7 @@
             this.btnDeleteStation.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDeleteStation.BackgroundImage")));
             this.btnDeleteStation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDeleteStation.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeleteStation.Location = new System.Drawing.Point(532, 105);
+            this.btnDeleteStation.Location = new System.Drawing.Point(532, 95);
             this.btnDeleteStation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeleteStation.Name = "btnDeleteStation";
             this.btnDeleteStation.Size = new System.Drawing.Size(75, 47);
@@ -185,7 +185,7 @@
             this.btnMap.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMap.BackgroundImage")));
             this.btnMap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMap.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMap.Location = new System.Drawing.Point(532, 295);
+            this.btnMap.Location = new System.Drawing.Point(532, 156);
             this.btnMap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMap.Name = "btnMap";
             this.btnMap.Size = new System.Drawing.Size(75, 47);

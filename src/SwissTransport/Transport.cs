@@ -44,7 +44,7 @@ namespace SwissTransport
         {
             try
             {
-                var request = CreateWebRequest("http://transport.opendata.ch/v1/connections?from=" + fromStation + "&to=" + toStation + "&time" + departureTime + "&date" + departureDate + "&isArrivalTime=" + isArrivalTime);
+                var request = CreateWebRequest("http://transport.opendata.ch/v1/connections?from=" + fromStation + "&to=" + toStation + "&time=" + departureTime + "&date=" + departureDate + "&isArrivalTime=" + isArrivalTime);
                 var response = request.GetResponse();
                 var responseStream = response.GetResponseStream();
                 if (responseStream != null)

@@ -199,7 +199,7 @@ namespace SBBTimetable
         //Function to set the membervariable departureTime
         private void SetDepartureTime()
         {
-            departureTime = (tpFromTime.Value.Hour+1) + ":" + tpFromTime.Value.Minute;
+            departureTime = (tpFromTime.Value.Hour) + ":" + tpFromTime.Value.Minute;
         }
         //Function to set the memvervariable departureDate
         private void SetDepartureDate()

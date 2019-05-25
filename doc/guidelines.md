@@ -1,5 +1,4 @@
 # Code Guidelines
-**Authors**: Tuan Binh Tran, Dominic Pohland - 28.11.2018
 
 # Zweck von Code Guidelines
 Die Idee von Code Guidelines sind folgende:

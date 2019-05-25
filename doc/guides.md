@@ -1,5 +1,4 @@
 # Anleitungen
-**Authors**: Dominic Pohland - 03.12.2018
 
 ### Installationsanleitung
 

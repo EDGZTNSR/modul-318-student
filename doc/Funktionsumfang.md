@@ -1,5 +1,4 @@
 # Funktionalitäten
-**Author**: Dominic Pohland - 03.12.2018
 
 ### umgesetze Funktionalitäten
 **A001**: 

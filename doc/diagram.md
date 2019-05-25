@@ -1,5 +1,4 @@
 # Diagramme
-**Authors**: Dominic Pohland - 03.12.2018
 
 ### Use Case und Aktivitätendiagramme
 ---

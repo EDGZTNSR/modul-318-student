@@ -1,5 +1,4 @@
 # Testing
-**Authors**: Dominic Pohland - 04.12.2018
 
 ### Testfälle
 
